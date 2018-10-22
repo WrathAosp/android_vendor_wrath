@@ -28,6 +28,7 @@ WRATH_BUILD_TIME :=
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(WRATH_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(WRATH_TARGET_PACKAGE) > $(WRATH_TARGET_PACKAGE).md5sum
+	$(hide) ./vendor/wrath/tools/generate_json_build_info.sh $(WRATH_TARGET_PACKAGE)
 	@echo -e ${CL_RED}""
 	@echo -e ${CL_RED}"========================================================================="${CL_RST}
 	@echo -e ${CL_RED}""
