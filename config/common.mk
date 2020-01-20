@@ -11,6 +11,9 @@ include vendor/Rage/config.mk
 # Bootanimation
 include vendor/wrath/bootanimation/bootanimation.mk
 
+# Include Wrath Theme
+include vendor/wrath/themes/backgrounds/themes.mk
+
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=android-google
