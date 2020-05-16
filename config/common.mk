@@ -107,5 +107,7 @@ PRODUCT_PACKAGES += \
     PixelSetupWizardOverlay \
     PixelSetupWizardAodOverlay
 
+$(call inherit-product-if-exists, external/motorola/faceunlock/config.mk)
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/wrath/config/partner_gms.mk
