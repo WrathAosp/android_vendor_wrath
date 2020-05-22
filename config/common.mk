@@ -12,7 +12,7 @@ include vendor/Rage/config.mk
 include vendor/wrath/bootanimation/bootanimation.mk
 
 # Include Wrath Theme
-include vendor/wrath/themes/backgrounds/themes.mk
+include vendor/wrath/themes/themes.mk
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -107,6 +107,7 @@ PRODUCT_PACKAGES += \
     PixelSetupWizardOverlay \
     PixelSetupWizardAodOverlay
 
+# Faceunlock
 $(call inherit-product-if-exists, external/motorola/faceunlock/config.mk)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
