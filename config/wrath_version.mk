@@ -56,4 +56,5 @@ PRODUCT_GENERIC_PROPERTIES += \
   ro.wrath.build.date=$(WRATH_BUILD_DATETIME)\
   ro.wrath.display.version=$(WRATH_DISPLAY_VERSION) \
   ro.wrath.fingerprint=$(WRATH_FINGERPRINT)\
-  ro.wrath.edition=$(WRATH_EDITION)
+  ro.wrath.edition=$(WRATH_EDITION)\
+  ro.wrath.maintainer=$(WRATH_MAINTAINER)
