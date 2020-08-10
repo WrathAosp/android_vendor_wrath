@@ -26,7 +26,7 @@
         <permission name="android.permission.MANAGE_USERS"/>
     </privapp-permissions>
 
-    <privapp-permissions package="com.wrath.updater">
+    <privapp-permissions package="org.lineageos.updater">
         <permission name="android.permission.ACCESS_CACHE_FILESYSTEM"/>
         <permission name="android.permission.REBOOT"/>
         <permission name="android.permission.RECOVERY"/>
