@@ -112,3 +112,15 @@ $(call inherit-product-if-exists, external/motorola/faceunlock/config.mk)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/wrath/config/partner_gms.mk
+
+# Face Unlock
+ifeq ($(WRATH_BUILD_TYPE), OFFICIAL)
+TARGET_FACE_UNLOCK_SUPPORTED := false
+ifneq ($(TARGET_DISABLE_ALTERNATIVE_FACE_UNLOCK), true)
+PRODUCT_PACKAGES += \
+    FaceUnlockService
+TARGET_FACE_UNLOCK_SUPPORTED := true
+endif
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.face.moto_unlock_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
+endif
